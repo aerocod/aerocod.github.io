@@ -56,16 +56,13 @@
         }
     </style>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KV72M548Q8"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1MJCHH2V36"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-KV72M548Q8');
+    gtag('config', 'G-1MJCHH2V36');
     </script>
 </head>
 
@@ -102,7 +99,7 @@
                             <a class="nav-link active" aria-current="page" style="color: white; animation: fadein 5s;" href="https://aerocod.github.io">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: white; animation: fadein 5s;" href="https://behance.net/neilwebsites">Design</a>
+                            <a class="nav-link" style="color: white; animation: fadein 5s;" href="https://aerocod.github.io/design">Design</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="color: white; animation: fadein 8s;" href="https://aerocod.github.io/website">Websites</a>
@@ -264,7 +261,7 @@
                                 }
                             </style> -->
 
-                            <h1 id="text03" style="transition: all 0.5s ease-in-out;">Our Website Portfolio</h1>
+                            <h1 id="text03" style="transition: all 0.5s ease-in-out;">Our Design Portfolio</h1>
                             <style>
                                 #text03 {
                                     animation: color-shift 10s ease-in-out infinite;
@@ -332,7 +329,7 @@
 
                             <!-- Basic Hover with glowing border effect -->
                             <p id="text" style="color: #f5f5f5; animation: shift 12.5s ease-in-out infinite alternate;">
-                                Welcome to Our Website Portfolio</p>
+                                Welcome to Our Design Portfolio</p>
 
                             <style>
                                 #text {
@@ -383,12 +380,40 @@
                             </style>
                             <ul id="icons02" class="style1 icons">
                                 <li>
-                                    <a class="n01" href="#container05">
+                                    <a class="n01" href="#container12">
                                         <svg>
                                             <use xlink:href="#icon-8a75e9205b2d7697ad826d592ebf05f0"></use>
                                         </svg>
                                         <span class="label">Arrow Down (Light)</span>
                                     </a>
+                                    <script>
+                                        document.querySelector('.n01').addEventListener('click', function(event) {
+                                            event.preventDefault();
+                                            let target = document.querySelector('#container12');
+                                            let targetPosition = target.offsetTop;
+                                            let startPosition = window.pageYOffset;
+                                            let distance = targetPosition - startPosition;
+                                            let duration = 1000;
+                                            let start = null;
+
+                                            function animation(currentTime) {
+                                                if (!start) start = currentTime;
+                                                let timeElapsed = currentTime - start;
+                                                let run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+                                                window.scrollTo(0, run);
+                                                if (timeElapsed < duration) requestAnimationFrame(animation);
+                                            }
+
+                                            function easeInOutQuad(t, b, c, d) {
+                                                t /= d / 2;
+                                                if (t < 1) return (c / 2) * t * t + b;
+                                                t--;
+                                                return (-c / 2) * (t * (t - 2) - 1) + b;
+                                            }
+
+                                            requestAnimationFrame(animation);
+                                        });
+                                    </script>
                                 </li>
                             </ul>
 
@@ -425,340 +450,427 @@
                     </div>
                 </div>
 
-                <div id="container19" data-scroll-id="begin" data-scroll-behavior="center" data-scroll-offset="0" data-scroll-invisible="1" class="style4 container columns full screen">
+                <div id="container12" class="style4 container columns full screen">
                     <div class="wrapper">
                         <div class="inner">
                             <div>
-                                <div id="image07" class="style1 image full" data-position="center">
-                                    <span class="frame deferred">
-                                        <img src="assets/images/project_toyota.png" alt="Neil Website" width="617"
-                                            height="405" />
-                                    </span>
+                                <div id="image05" class="style1 image full" data-position="center" width="614" height="405">
+                                    <span class="frame deferred"><img src="assets/images/design_rj.png"
+                                            alt="jasa pembuatan website" /></span>
                                 </div>
                             </div>
                             <div>
-                                <h2 id="text12" class="style1">Promo Best Toyota Website</h2>
-                                <p id="text15" class="style3">Neil Website has expertly crafted the PromoBestToyotaID.com website, delivering a seamless user experience with a clean and modern design. This site accurately represents the Toyota brand and effectively showcases their
-                                    promotions, making it a one-stop-shop for Toyota enthusiasts.
-                                </p>
-                                <a href="https://promobesttoyotaid.com" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View Website</a>
+                                <h2 id="text20" class="style1">Rich Juice App Design</h2>
+                                <p id="text24" class="style3">Welcome to the Rich Kitchen App, where you can boost your health! Indulge in the star of our lineup, Rich Juice a delightful fusion of flavors and nutrition crafted from the finest and fresh ingredients.
 
+                                    Rich Juice offers a diverse range of healthy options. Order your favorites healthy drinks, from various platforms such as Gojek, Shopee, Tokopedia, or Grab, ensuring your health with ease. 
+                                </p>
+                                <a href="https://www.behance.net/gallery/183140497/UIUX-Case-Study-Food-Company-Profile-App" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View Design</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <script>
-                    document.querySelector('.n01').addEventListener('click', function(event) {
-                        event.preventDefault();
-                        let target = document.querySelector('#container19');
-                        let targetPosition = target.offsetTop;
-                        let startPosition = window.pageYOffset;
-                        let distance = targetPosition - startPosition;
-                        let duration = 1000;
-                        let start = null;
+                <div id="container05" class="style5 container columns full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div>
+                                <h2 id="text10" class="style1">Petshop App Design</h2>
+                                <p id="text11" class="style3">"Neil Pet Shop" is an app that offers a convenient way for pet owners to purchase products, schedule appointments, services, and connect with local pet service providers. It features a user-friendly interface and allows to keep track of order delivery status. The app aims to make it easy for pet owners to find and purchase the things they need to keep their pets healthy and happy.
+                                </p>
+                                <a href="https://www.behance.net/gallery/161956999/Petshop-app-UX-case-study" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
+                                                    Design</a>
+                            </div>
+                            <div>
+                                <div id="image03" class="style1 image full" data-position="center" width="572" height="405">
+                                    <span class="frame deferred">
+                                        <img src="assets/images/uiux_project.png" alt="ui.neil" /></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="container12" class="style4 container columns full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div>
+                                <div id="image05" class="style1 image full" data-position="center" width="614" height="405">
+                                    <span class="frame deferred"><img src="assets/images/BudayaTube - cover.jpg"
+                                            alt="jasa pembuatan website" /></span>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 id="text20" class="style1">BudayaTube App Design</h2>
+                                <p id="text24" class="style3">Forget boring textbooks! Our app brings Indonesian culture to life for Gen Z and Alpha. Explore traditional dances, music, food, and fashion through fun, bite-sized videos - just like TikTok! Quizzes and challenges make learning interactive, and social features let you share your discoveries with friends. It's the perfect way to keep Indonesia's vibrant culture alive!
+                                </p>
+                                <a href="https://dribbble.com/shots/24217154-BudayaTube-UI-UX-Case-Study" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View Design</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="container05" class="style5 container columns full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div>
+                                <h2 id="text10" class="style1">Hi Doctor - Sprint Design</h2>
+                                <p id="text11" class="style3">In today's fast-paced world, navigating traditional healthcare systems can be time-consuming and inconvenient. Long wait times for appointments and limited access to specialists often lead to delayed diagnoses and treatment plans. This project aims to bridge this gap by introducing "Hi Doctor," a user-friendly mobile app that empowers individuals to connect with healthcare professionals seamlessly.
+                                </p>
+                                <a href="https://dribbble.com/shots/24226174-Hi-Doctor-Sprint-Design" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
+                                                    Design</a>
+                            </div>
+                            <div>
+                                <div id="image03" class="style1 image full" data-position="center" width="572" height="405">
+                                    <span class="frame deferred">
+                                        <img src="assets/images/behance cover.jpg   " alt="ui.neil" /></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="container12" class="style4 container columns full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div>
+                                <div id="image05" class="style1 image full" data-position="center" width="614" height="405">
+                                    <span class="frame deferred"><img src="assets/images/healthy one cover.png"
+                                            alt="jasa pembuatan website" /></span>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 id="text20" class="style1">Healthy One App Design</h2>
+                                <p id="text24" class="style3">Healthy One is a mobile app designed to simplify your healthcare experience. Schedule appointments with specialists, manage your health insurance, and access reliable health information - all in one place. Take charge of your well-being with Healthy One, your pocket-sized healthcare companion.
+                                </p>
+                                <a href="https://dribbble.com/shots/24242787-Healthy-One-One-Stop-Health-App" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View Design</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="container05" class="style5 container columns full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div>
+                                <h2 id="text10" class="style1">Kopkar KBN - Business Digitalization</h2>
+                                <p id="text11" class="style3">This project focuses on creating a comprehensive digital platform for Kopkar KBN. Members will be able to manage their finances, access loan applications, shop at the mini-market online, and order office supplies seamlessly, all within a secure and efficient digital environment.
+                                </p>
+                                <a href="https://dribbble.com/shots/24255313-Kopkar-KBN-Business-Digitalization" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
+                                                    Design</a>
+                            </div>
+                            <div>
+                                <div id="image03" class="style1 image full" data-position="center" width="572" height="405">
+                                    <span class="frame deferred">
+                                        <img src="assets/images/kopkar.png" alt="ui.neil" /></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="container12" class="style4 container columns full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div>
+                                <div id="image05" class="style1 image full" data-position="center" width="614" height="405">
+                                    <span class="frame deferred"><img
+                                                            src="assets/images/numerous_ai.png"
+                                                            alt="jasa pembuatan website" /></span>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 id="text20" class="style1">Numerous.ai - Dashboard Redesign</h2>
+                                <p id="text24" class="style3">
+                                    Numerous.ai provides the simplest, most powerful and cost-effective solution for using ChatGPT inside Google Sheets and Excel. Numerous.ai could do a research & organize digital marketing campaigns, summarize, categorize, classify, cleanse, test & collaborate on AI prototypes, ideate & create content. Numerous.ai could work with content creators, digital marketers, students & researchers, product engineers & product managers. What are you waiting for? use Numerous.ai to succeed your dream. 
+                                </p>
+                                <a href="https://dribbble.com/shots/24379015-Numerous-ai-Dashboard-Redesign-Project" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="container05" class="style5 container columns full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div>
+                                <h2 id="text10" class="style1">Literasictarsa.id Website Redesign</h2>
+                                <p id="text11" class="style3"> Literasictarsa.id: Rekindled Learning - literasictarsa.id's e-learning platform gets a learning makeover! Dated design and confusing navigation are out. We bring a fresh look, intuitive experience, and accessibility focus, making learning a joy for all.
+                                </p>
+                                <a href="https://www.behance.net/gallery/202474343/Literasictarsaid-Website-Redesign?" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
+                                                    Design</a>
+                            </div>
+                            <div>
+                                <div id="image03" class="style1 image full" data-position="center" width="572" height="405">
+                                    <span class="frame deferred">
+                                        <img src="assets/images/coverliterasi.png" alt="ui.neil" /></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="container12" class="style4 container columns full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div>
+                                <div id="image05" class="style1 image full" data-position="center" width="614" height="405">
+                                    <span class="frame deferred"><img
+                                                            src="assets/images/23.png"
+                                                            alt="jasa pembuatan website" /></span>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 id="text20" class="style1">Neilstream - UI/UX Case Study</h2>
+                                <p id="text24" class="style3">
+                                    Neilstream disrupts entertainment with a free streaming platform bursting with popular movies & more! No subscriptions, just endless entertainment. Our user-friendly interface makes navigating a breeze. Discover trending picks, popular channels & personalized recommendations. Find specific titles with our search bar & stay updated with new releases via notifications. neilstream goes beyond free content - manage your account, security & privacy with ease. Join the revolution and unlock a world of free movies!
+                                </p>
+                                <a href="https://www.behance.net/gallery/202575607/Neilstream-UIUX-Case-Study" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="container05" class="style5 container columns full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div>
+                                <h2 id="text10" class="style1">Healthy One: Psychological Test Web to App Conversion</h2>
+                                <p id="text11" class="style3"> This project tackles the transformation of HealthyOne's popular psychological test from a web-based platform to a mobile app. Our goal is to enhance accessibility and user experience, empowering individuals to take control of their mental well-being on the go for job seekers in Healthy One. Here is the existing website: <p id="text11" class="style3"> <a href="https://healthyone.app/">https://healthyone.app/</p> 
+                                </p>
+                                <a href="https://www.behance.net/gallery/202737835/Healthy-One-Psychological-Test-Web-to-App-Conversion" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
+                                                    Design</a>
+                            </div>
+                            <div>
+                                <div id="image03" class="style1 image full" data-position="center" width="572" height="405">
+                                    <span class="frame deferred">
+                                        <img src="assets/images/psy-cover.png" alt="ui.neil" /></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="container12" class="style4 container columns full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div>
+                                <div id="image05" class="style1 image full" data-position="center" width="614" height="405">
+                                    <span class="frame deferred"><img
+                                                            src="assets/images/cover margamulya.png"
+                                                            alt="jasa pembuatan website" /></span>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 id="text20" class="style1">
+                                    Digitalization Through LMS: Margamulya Village</h2>
+                                <p id="text24" class="style3">
+                                    This project focuses on building a digital community ecosystem for Desa Margamulya Tj. Kait, aiming to bridge the digital divide and empower residents towards a Society 5.0 future.
+                                </p>
+                                <a href="https://www.behance.net/gallery/203103945/Digitalization-Through-LMS-Margamulya-Village" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="container05" class="style5 container columns full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div>
+                                <h2 id="text10" class="style1">E-timesheet: PT. Blue Bird Tbk</h2>
+                                <p id="text11" class="style3"> This project tackled the challenge of manual timesheet review at Bluebird Tbk. I designed an e-timesheet reconciliation feature within the Bluebird Corporate Portal, empowering authorized personnel with a digital platform to efficiently review and approve driver timesheets.
+                                </p>
+                                <a href="https://www.behance.net/gallery/203673273/E-timesheet-Blue-Bird" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
+                                                    Design</a>
+                            </div>
+                            <div>
+                                <div id="image03" class="style1 image full" data-position="center" width="572" height="405">
+                                    <span class="frame deferred">
+                                        <img src="assets/images/e-timesheet cover.png" alt="ui.neil" /></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="container12" class="style4 container columns full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div>
+                                <div id="image05" class="style1 image full" data-position="center" width="614" height="405">
+                                    <span class="frame deferred"><img
+                                                            src="assets/images/up toll balik cover.png"
+                                                            alt="jasa pembuatan website" /></span>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 id="text20" class="style1">
+                                    Cost Management: Golden Bird Operations</h2>
+                                <p id="text24" class="style3">
+                                    This project involved designing a comprehensive Up & Toll Balik management system for PT Blue Bird Tbk. The system provides a centralized platform for managing and monitoring up & toll balik requests and reimbursements.
 
-                        function animation(currentTime) {
-                            if (!start) start = currentTime;
-                            let timeElapsed = currentTime - start;
-                            let run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
-                            window.scrollTo(0, run);
-                            if (timeElapsed < duration) requestAnimationFrame(animation);
-                        }
+                                </p>
+                                <a href="https://www.behance.net/gallery/204999971/Cost-Management-Golden-Bird-Operations" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="container05" class="style5 container columns full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div>
+                                <h2 id="text10" class="style1">Summary Stock Pangkalan: PT. Blue Bird Tbk</h2>
+                                <p id="text11" class="style3"> This project tackled the challenge of inefficient manual vehicle stock tracking at PT Blue Bird Tbk. I designed a "Summary Stock Pangkalan" dashboard for the company's internal platform, providing a centralized view of vehicle availability across different pangkalan locations (hotels, airports, etc.).
+                                </p>
+                                <a href="https://www.behance.net/gallery/204132413/Golden-Bird-Operation-Summary-Stock-Pangkalan" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
+                                                    Design</a>
+                            </div>
+                            <div>
+                                <div id="image03" class="style1 image full" data-position="center" width="572" height="405">
+                                    <span class="frame deferred">
+                                        <img src="assets/images/cover gb_summarystock.png" alt="ui.neil" /></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="container12" class="style4 container columns full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div>
+                                <div id="image05" class="style1 image full" data-position="center" width="614" height="405">
+                                    <span class="frame deferred"><img
+                                                            src="assets/images/Flight Management Golden Bird - Cover.png"
+                                                            alt="jasa pembuatan website" /></span>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 id="text20" class="style1">
+                                    Flight Management Dashboard: Golden Bird Operations</h2>
+                                <p id="text24" class="style3">
+                                    Soar to new heights of operational efficiency with the redesigned flight management dashboard for PT Blue Bird Tbk. This user-friendly platform provides a centralized hub for managing flights, empowering personnel to streamline scheduling, optimize resources, and effortlessly manage operations.
 
-                        function easeInOutQuad(t, b, c, d) {
-                            t /= d / 2;
-                            if (t < 1) return (c / 2) * t * t + b;
-                            t--;
-                            return (-c / 2) * (t * (t - 2) - 1) + b;
-                        }
+                                </p>
+                                <a href="https://www.behance.net/gallery/204788697/Flight-Management-Dashboard-Golden-Bird" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="container05" class="style5 container columns full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div>
+                                <h2 id="text10" class="style1">Cost Management in Cash Receipt Package: PT. Blue Bird Tbk</h2>
+                                <p id="text11" class="style3"> This project involved designing a comprehensive paketan kasbon (advance payment package) management system for PT Blue Bird Tbk. The system provides a centralized platform for managing and monitoring kasbon requests across different areas and pangkalan (locations).
+                                </p>
+                                <a href="https://www.behance.net/gallery/204947221/Cost-Management-Golden-Bird" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
+                                                    Design</a>
+                            </div>
+                            <div>
+                                <div id="image03" class="style1 image full" data-position="center" width="572" height="405">
+                                    <span class="frame deferred">
+                                        <img src="assets/images/cover paketan kasbon.png" alt="ui.neil" /></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="container12" class="style4 container columns full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div>
+                                <div id="image05" class="style1 image full" data-position="center" width="614" height="405">
+                                    <span class="frame deferred"><img
+                                                            src="assets/images/vehicle list on golden bird - cover.png"
+                                                            alt="jasa pembuatan website" /></span>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 id="text20" class="style1">
+                                    Vehicle Management Dashboard: Golden Bird Operations</h2>
+                                <p id="text24" class="style3">
+                                    Streamlined fleet management takes off at PT Blue Bird Tbk with a redesigned vehicle management dashboard. This user-friendly platform centralizes vehicle information, empowering operational personnel to efficiently view, edit, and manage their fleet.
 
-                        requestAnimationFrame(animation);
-                    });
-                </script>
-                <!-- Floating WA -->
+
+                                </p>
+                                <a href="https://www.behance.net/gallery/204649025/Vehicle-Management-Dashboard-Golden-Bird" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="container05" class="style5 container columns full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div>
+                                <h2 id="text10" class="style1">Driver List Dashboard: PT. Blue Bird Tbk</h2>
+                                <p id="text11" class="style3"> This project tackled the challenge of managing driver data across various systems at PT Blue Bird Tbk. I designed a unified driver management dashboard, adhering to the company's BB One design system. This centralized platform streamlines driver administration and improves operational efficiency.
+                                </p>
+                                <a href="https://www.behance.net/gallery/204572053/Driver-List-Dashboard-Golden-Bird-Operation" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
+                                                    Design</a>
+                            </div>
+                            <div>
+                                <div id="image03" class="style1 image full" data-position="center" width="572" height="405">
+                                    <span class="frame deferred">
+                                        <img src="assets/images/driver list gb - cover.png" alt="ui.neil" /></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div id="container05" class="style5 container columns full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div>
+                                <h2 id="text20" class="style1">Portfolio - Instagram</h2>
+                                <p id="text24" class="style3">Welcome to the digital realm of UI/UX design with ui.neil. My portfolio is a testament to the art of crafting user-centric experiences. Dive into a collection of projects where form meets function, showcasing the meticulous process of turning ideas into intuitive and visually compelling interfaces. Explore the world of UI.neil's design philosophy on Instagram. 
+                                </p>
+                                <a href="http://instagram.com/ui.neil" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View Portfolio</a>
+                            </div>
+                            <div>
+                                <div id="image05" class="style1 image full" data-position="center" width="572" height="405">
+                                    <span class="frame deferred">
+                                        <img src="assets/images/uiux_portfolio.jpg" alt="ui.neil" /></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div id="container12" class="style4 container columns full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div>
+                                <div id="image05" class="style1 image full" data-position="center" width="614" height="405">
+                                    <span class="frame deferred"><img
+                                                            src="assets/images/uiux_design.jpg"
+                                                            alt="jasa pembuatan website" /></span>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 id="text20" class="style1">Portfolio - Dribbble</h2>
+                                <p id="text24" class="style3">Step into the virtual gallery of Neil's design prowess on Dribbble. Witness a curated collection of web design masterpieces that seamlessly blend creativity with functionality. Each pixel is purposefully placed, showcasing the meticulous craftsmanship that defines Neil's work. Explore the portfolio on Dribbble for a visual journey through cutting-edge web interfaces, where innovation meets user experience.
+                                </p>
+                                <a href="https://dribbble.com/NeilWebsite" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                <div id="container05" class="style5 container columns full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div>
+                                <h2 id="text20" class="style1">Portfolio - Behance</h2>
+                                <p id="text24" class="style3">Welcome to Neil's digital atelier on Behance, where design meets innovation. Delve into a gallery of captivating web projects, each a testament to meticulous craftsmanship and creative prowess. Neil's Behance portfolio is a showcase of web design excellence, where user experience takes center stage. Explore the collection to witness the seamless integration of aesthetics and functionality, reflecting a commitment to pushing the boundaries of digital creativity. Join the visual journey on Behance and experience the artistry behind Neil's web design creations. 
+                                </p>
+                                <a href="https://www.behance.net/neilwebsites" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View Portfolio</a>
+                            </div>
+                            <div>
+                                <div id="image05" class="style1 image full" data-position="center" width="572" height="405">
+                                    <span class="frame deferred">
+                                        <img src="assets/images/web_portfolio.jpg" alt="ui.neil" /></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  -->
+
+                <!-- Floating Wa -->
                 <div class="joinchat joinchat--right joinchat--dark-auto joinchat--btn joinchat--show joinchat--tooltip" data-settings="{&quot;telephone&quot;:&quot;6282358866353&quot;,&quot;mobile_only&quot;:false,&quot;button_delay&quot;:2,&quot;whatsapp_web&quot;:false,&quot;qr&quot;:false,&quot;message_views&quot;:2,&quot;message_delay&quot;:10,&quot;message_badge&quot;:false,&quot;message_hash&quot;:&quot;&quot;}">
                     <a href="https://wa.me/6287709289728?text=Halo Neil Website,%0A%0ASaya ingin membuat website atau UI UX design.">
                         <div class="joinchat__button">
                             <div class="joinchat__button__open"></div>
                             <div class="joinchat__tooltip">
-                                <div>Need a Website Development?</div>
+                                <div>Need a Web or App Design?</div>
                             </div>
                         </div>
                     </a>
-                </div>
-
-                <div id="container05" class="style5 container columns full screen">
-                    <div class="wrapper">
-                        <div class="inner">
-                            <div>
-                                <h2 id="text10" class="style1">PT. Cahaya Pelita Pelangi Website</h2>
-                                <p id="text11" class="style3">PT. Cahaya Pelita Pelangi is a company that specializing in color industry, offering a wide range of food, drink and related products. This website boasts a user-friendly interface and visually appealing design, providing
-                                    seamless company profile for our relative PT. Cahaya Pelita Pelangi Company.</p>
-                                <a href="https://www.cahayapelitapelangi.com/" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View Website</a>
-                            </div>
-                            <div>
-                                <div id="image03" class="style1 image full" data-position="center" width="572" height="405">
-                                    <span class="frame deferred"><img src="assets/images/project_cpp.png"
-                                            alt="PT. Cahaya Pelita Pelangi" /></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="container12" class="style4 container columns full screen">
-                    <div class="wrapper">
-                        <div class="inner">
-                            <div>
-                                <div id="image05" class="style1 image full" data-position="center" width="614" height="405">
-                                    <span class="frame deferred"><img src="assets/images/project_aseanedu.png"
-                                            alt="jasa pembuatan website" /></span>
-                                </div>
-                            </div>
-                            <div>
-                                <h2 id="text20" class="style1">AseanEdu Blog</h2>
-                                <p id="text24" class="style3">We've created aseanedu.org blog, a platform for discussing education topics in Southeast Asia. This blog aims to provide valuable insights, resources, and discussions on the education sector in the ASEAN region. This blog
-                                    is a source of information for educators, students, and education enthusiasts looking to stay up to date on the latest trends in education across Southeast Asia.
-                                </p>
-                                <a href="http://www.aseanedu.org/" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View Website</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="container05" class="style5 container columns full screen">
-                    <div class="wrapper">
-                        <div class="inner">
-                            <div>
-                                <h2 id="text10" class="style1">Toko Global Susu</h2>
-                                <p id="text11" class="style3">Introducing a user-friendly website platform, tokoglobalsusu.com, for a milk store. This website showcases a wide range of dairy products and allows customers to place orders easily by WhatsApp. With a clean and modern
-                                    design, tokoglobalsusu.com website offers a convenient shopping experience for those who are looking for high-quality milk products.
-                                </p>
-                                <a href="https://www.tokoglobalsusu.com/" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
-                                                    Website</a>
-                            </div>
-                            <div>
-                                <div id="image03" class="style1 image full" data-position="center" width="572" height="405">
-                                    <span class="frame deferred">
-                                        <img src="assets/images/project_tgs.png" alt="Toko Global Susu" /></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="container12" class="style4 container columns full screen">
-                    <div class="wrapper">
-                        <div class="inner">
-                            <div>
-                                <div id="image05" class="style1 image full" data-position="center" width="614" height="405">
-                                    <span class="frame deferred"><img
-                                                            src="assets/images/project_euro.png"
-                                                            alt="jasa pembuatan website" /></span>
-                                </div>
-                            </div>
-                            <div>
-                                <h2 id="text20" class="style1">Eurograd Blog</h2>
-                                <p id="text24" class="style3">EUROGRAD-EM is a non-profit organization created by alumni of European Union Scholarships. This organization was established with the aim of improving the quality of human resources through quality education and training.
-                                    Everyone has potential, but not everyone has an opportunity. For this reason, EUROGRAD-EM is here to provide an opportunity for everyone to increase their potential lives.
-                                </p>
-                                <a href="http://www.eurograd.org/" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View Website</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="container05" class="style5 container columns full screen">
-                    <div class="wrapper">
-                        <div class="inner">
-                            <div>
-                                <h2 id="text10" class="style1">Top Up Gaming Store</h2>
-                                <p id="text11" class="style3">We're created a website for Ners Gaming Store Indonesia, providing a platform for gamers to purchase the latest gaming products and accessories. The website showcases a wide range of products, making it easy for gamers
-                                    to find what they need and making the purchasing process simple and seamless.
-                                </p>
-                                <a href="https://nersgamingstore-id.com/" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
-                                                    Website</a>
-                            </div>
-                            <div>
-                                <div id="image03" class="style1 image full" data-position="center" width="572" height="405">
-                                    <span class="frame deferred"><img
-                                                            src="assets/images/project_ners.png"
-                                                            alt="jasa pembuatan website" /></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="container12" class="style4 container columns full screen">
-                    <div class="wrapper">
-                        <div class="inner">
-                            <div>
-                                <div id="image05" class="style1 image full" data-position="center" width="614" height="405">
-                                    <span class="frame deferred"><img
-                                                            src="assets/images/project_nsusu.png"
-                                                            alt="jasa pembuatan website" /></span>
-                                </div>
-                            </div>
-                            <div>
-                                <h2 id="text20" class="style1">Toko Natasha Susu</h2>
-                                <p id="text24" class="style3">Introducing a user-friendly website platform, natashasusudanperlengkapanbayi.com, for a milk store. This website showcases a wide range of dairy products and allows customers to place orders easily by WhatsApp. With a clean
-                                    and modern design, natashasusudanperlengkapanbayi.com website offers a convenient shopping experience for those who are looking for high-quality milk products.
-                                </p>
-                                <a href="http://natashasusudanperlengkapanbayi.com" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View Website</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="container05" class="style5 container columns full screen">
-                    <div class="wrapper">
-                        <div class="inner">
-                            <div>
-                                <h2 id="text10" class="style1">Karo Idol 2023</h2>
-                                <p id="text11" class="style3">Karo Idol is a website special for Karo Idol 2023 Registration. In this website, users could register for Karo Idol event in singing competition. This website is for you if you have bunch talent of singing or playing music
-                                    instrument. What are you waiting for? come and join Karo Idol 2023, registration will be closed on 31st May 2023. Don't miss it out.
-                                </p>
-                                <a href="https://www.karoidol.com/" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
-                                                    Website</a>
-                            </div>
-                            <div>
-                                <div id="image03" class="style1 image full" data-position="center" width="572" height="405">
-                                    <span class="frame deferred"><img src="assets/images/karo_idol.png"
-                                                            alt="jasa pembuatan website" /></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="container12" class="style4 container columns full screen">
-                    <div class="wrapper">
-                        <div class="inner">
-                            <div>
-                                <div id="image05" class="style1 image full" data-position="center" width="614" height="405">
-                                    <span class="frame deferred"><img src="assets/images/project_masayu.png"
-                                                            alt="jasa pembuatan website" /></span>
-                                </div>
-                            </div>
-                            <div>
-                                <h2 id="text20" class="style1">Masayu Maya Knowledge</h2>
-                                <p id="text24" class="style3">Welcome to Masayumaya Knowledge, your go-to blog for insightful and engaging content. Explore a wide range of topics including science, technology, arts, and more. Discover informative articles, helpful tips, and thought-provoking
-                                    discussions, all carefully curated to expand your knowledge and inspire your curiosity. View this blog to enlightening your journey!
-                                </p>
-                                <a href="https://masayumaya-knowledge.blogspot.com/" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
-                                                    Website</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="container05" class="style5 container columns full screen">
-                    <div class="wrapper">
-                        <div class="inner">
-                            <div>
-                                <h2 id="text10" class="style1">Livehub Indonesia</h2>
-                                <p id="text11" class="style3">Livehub.co.id is a website that developed by Neil Website. This website contain live streaming services to maximize online selling experience professionally. Themed with galaxy and space, this website has visually appealing interfaces and experience.
-                                </p>
-                                <a href="https://www.livehub.co.id" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
-                                                    Website</a>
-                            </div>
-                            <div>
-                                <div id="image03" class="style1 image full" data-position="center" width="572" height="405">
-                                    <span class="frame deferred"><img src="assets/images/blog_development.png"
-                                                            alt="jasa pembuatan website" /></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="container12" class="style4 container columns full screen">
-                    <div class="wrapper">
-                        <div class="inner">
-                            <div>
-                                <div id="image05" class="style1 image full" data-position="center" width="614" height="405">
-                                    <span class="frame deferred"><img src="assets/images/project_2.png"
-                                                            alt="jasa pembuatan website" /></span>
-                                </div>
-                            </div>
-                            <div>
-                                <h2 id="text20" class="style1">HDJ Indonesia</h2>
-                                <p id="text24" class="style3">This is our company profile website development project about HDJ Indonesia company. HDJ Indonesia is a company that runs in Geology and Mining Support. Themed with classical company profile, creates a professional experience.
-                                </p>
-                                <a href="https://hdjindonesia.com" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
-                                                    Website</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="container05" class="style5 container columns full screen">
-                    <div class="wrapper">
-                        <div class="inner">
-                            <div>
-                                <h2 id="text10" class="style1">Spicypoly Indonesia</h2>
-                                <p id="text11" class="style3">Spicypoly is a company engaged in the cultivation of cayenne peppers located in Makassar and is a P2MW Unismuh Makassar Program with the vision of becoming the main provider of high quality organic cayenne peppers in the local market.
-                                </p>
-                                <a href="https://www.spicypoly.com" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
-                                                    Website</a>
-                            </div>
-                            <div>
-                                <div id="image03" class="style1 image full" data-position="center" width="572" height="405">
-                                    <span class="frame deferred"><img src="assets/images/spicy poly.png"
-                                                            alt="jasa pembuatan website" /></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="container12" class="style4 container columns full screen">
-                    <div class="wrapper">
-                        <div class="inner">
-                            <div>
-                                <div id="image05" class="style1 image full" data-position="center" width="614" height="405">
-                                    <span class="frame deferred"><img src="assets/images/PT KBN Persero.png"
-                                                            alt="jasa pembuatan website" /></span>
-                                </div>
-                            </div>
-                            <div>
-                                <h2 id="text20" class="style1">PT. KBN Persero</h2>
-                                <p id="text24" class="style3">PT. KBN (Persero) as a cooperative which operates in the service sector, especially savings and loans, labor distribution, stationery supplies, basic necessities, official vehicle rental, etc.
-                                </p>
-                                <a href="https://kopkarkbn.com" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
-                                                    Website</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="container05" class="style5 container columns full screen">
-                    <div class="wrapper">
-                        <div class="inner">
-                            <div>
-                                <h2 id="text10" class="style1">Sustain.health</h2>
-                                <p id="text11" class="style3">Sustain health is a healthcare company that solves problem in diabetes, PCOS, and lifestyle reset programme. This company is located in Dubai, UAE.
-                                </p>
-                                <a href="https://www.sustain.health" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
-                                                    Website</a>
-                            </div>
-                            <div>
-                                <div id="image03" class="style1 image full" data-position="center" width="572" height="405">
-                                    <span class="frame deferred"><img src="assets/images/Cover sustain health.png"
-                                                            alt="jasa pembuatan website" /></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="container12" class="style4 container columns full screen">
-                    <div class="wrapper">
-                        <div class="inner">
-                            <div>
-                                <div id="image05" class="style1 image full" data-position="center" width="614" height="405">
-                                    <span class="frame deferred"><img src="assets/images/Cover aegis id.png"
-                                                            alt="jasa pembuatan website" /></span>
-                                </div>
-                            </div>
-                            <div>
-                                <h2 id="text20" class="style1">Aegis Indonesia</h2>
-                                <p id="text24" class="style3">Aegis Indonesia is a company that runs in education platform that aims to bridge the gap between aspiring learners and professional skill-building opportunities.
-
-                                </p>
-                                <a href="https://aegisindonesia.com" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
-                                                    Website</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div id="container25" class="style3 container columns" style="opacity: 1; transform: none;">
                     <div class="wrapper">
@@ -767,27 +879,27 @@
                                 <h2 id="text38" class="style1">Home Page</h2>
                                 <div id="image04" class="style3 image" data-position="center" style="opacity: 1; transform: none;">
                                     <span class="frame deferred" style="background-image: none; background-size: 100% 100%; background-position: left top; background-repeat: no-repeat;"><img
-                                            src="assets/images/uiux_portfolio.jpg" alt="Neil Website Portfolio" style="opacity: 1;"></span>
+                                                            src="assets/images/uiux_portfolio.jpg" alt="Neil Website Portfolio"
+                                                            style="opacity: 1;"></span>
                                 </div>
-                                <p id="text52" class="style3">Here's our Home Page. You may check our design and website projects below View Page button.
-                                </p>
+                                <p id="text52" class="style3">Here's our Home Page. You may check our design and website projects below View Page button.</p>
                                 <a href="https://aerocod.github.io" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
-                                    Home Page</a>
+                                                    Home Page</a>
                             </div>
                             <div>
-                                <h2 id="text38" class="style1">UI UX Design Portfolio</h2>
-                                <div id="image04" class="style3 image" data-position="center" style="opacity: 1; transform: none;">
+                                <h2 id="text54" class="style1">Web Projects Portfolio</h2>
+                                <div id="image01" class="style3 image" data-position="center" style="opacity: 1; transform: none;">
                                     <span class="frame deferred" style="background-image: none; background-size: 100% 100%; background-position: left top; background-repeat: no-repeat;"><img
-                                            src="assets/images/web_portfolio.jpg" alt="Neil Website Portfolio" style="opacity: 1;"></span>
+                                                            src="assets/images/web_portfolio.jpg" alt="Neil Website Portofolio"
+                                                            style="opacity: 1;"></span>
                                 </div>
-                                <p id="text52" class="style3">Here's our UI UX Design Portfolio. You may check our design projects below View Portfolio button.</p>
-                                <a href="https://behance.net/neilwebsites" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
-                                    Portfolio</a>
+                                <p id="text62" class="style3">Here's our Website Portfolio. You may check our website projects below View Portfolio button.</p>
+                                <a href="https://aerocod.github.io/website" id="btn" style="display: inline-block; padding: 10px 20px; background: transparent; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 30px; text-align: center; text-decoration: none;">View
+                                                    Portfolio</a>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div id="container53" class="container default full screen">
                     <div class="wrapper">
                         <div class="inner">
@@ -942,7 +1054,6 @@
             </div>
         </div>
     </div>
-
     <script>
         window.addEventListener("beforeunload", function() {
             localStorage.setItem("scrollPos", window.pageYOffset);
@@ -956,6 +1067,7 @@
             }
         });
     </script>
+
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="assets/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
